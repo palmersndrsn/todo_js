@@ -8,14 +8,15 @@ form.onsubmit = function () {
 	
 	event.preventDefault();
 
-var ulList = document.createElement('ul');
-var newTextNode = document.createTextNode(input.value);
+var ulList = document.createElement('li');
+var newTextNode = document.createTextNode(input.value + ' ');
 var rmButton = document.createElement('button') 
 
 	rmButton.innerHTML = 'X'
 	list.appendChild(ulList)
 	ulList.appendChild(newTextNode)
 	ulList.appendChild(rmButton)
+	form.reset();
 
 	rmButton.onclick = function () {
 
